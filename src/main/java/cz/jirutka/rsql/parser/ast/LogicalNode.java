@@ -46,7 +46,7 @@ public abstract class LogicalNode extends AbstractNode implements Iterable<Node>
         assert children != null : "children must not be null";
 
         this.operator = operator;
-        this.children = unmodifiableList(new ArrayList<>(children));
+        this.children = unmodifiableList(new ArrayList<Node>(children));
     }
 
 
@@ -71,7 +71,7 @@ public abstract class LogicalNode extends AbstractNode implements Iterable<Node>
      * Returns a copy of the children nodes.
      */
     public List<Node> getChildren() {
-        return new ArrayList<>(children);
+        return new ArrayList<Node>(children);
     }
 
 
